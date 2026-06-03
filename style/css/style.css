@@ -60,7 +60,7 @@ body {
    color: var(--color-primary-light);
 } 
 
-p {
+p, h1 {
    font-family: 'minha-fontzada', monospace;
    color: var(--color-neutral-dark)
 }
