@@ -1,118 +1,302 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Membro ByteCatz</title>
-    <link rel="stylesheet" href="style/css/bootstrap.min.css">
+    <title>EdDev | ByteCat</title>
+    
     <link rel="stylesheet" href="style/css/style.css">
-    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap CSS (CDN para funcionar imediatamente - Substitua por arquivo local) -->
+    <link href="style/css/bootstrap.min.css" rel="stylesheet"> 
+    <!-- FontAwesome para Ícones (Opcional, mas bom para Github/Twitter/etc) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 </head>
+<body style="color: var(--cor-primaria);">
 
-<body class="container-fluid">
-
-    <header class="bg-dark shadow-sm px-3">
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <div class="row">
-
-                <div class="col-2">
-                    <p>logo</p>
-                </div>
-
-                <div class="col-3">
-                    <h1 class="text-light fw-bolder mb-0">EdDev_</h1>
-                </div>
-
-                <div class="justify-content-evenly ">
-                    <nav class="">
-                        <a class="text-decoration-none link-default overlay-text" href="#">Main Page</a>
-                        <a class="text-decoration-none link-default overlay-text" href="#">Projetos Favoritos</a>
-                        <a class="text-decoration-none link-default overlay-text" href="#">Outros Projetos</a>
-                    </nav>
-                </div>
+            <a class="navbar-brand" href="#">
+                <span style="color: var(--cor-neon);">root@</span>portfolio:~#
+            </a>
+            <button class="navbar-toggler bg-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">/Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#sobre">/Sobre_Mim</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projetos-principais">/Projetos_Principais</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#outros-projetos">/Outros_Projetos</a></li>
+                </ul>
             </div>
         </div>
+    </nav>
 
+    <div class="crt-container">
+        
+        <!-- HOME SECTION -->
+        <section id="home" class="d-flex flex-column justify-content-center align-items-center text-center" style="min-height: 100vh; padding: 20px;">
+            
+            <div class="mb-4">
+                <!-- Animação de Digitação -->
+                <h2 class="mb-3" style="color: var(--cor-secundaria); min-height: 1.5em;">
+                    <span id="typing-text"></span><span class="cursor">&nbsp;</span>
+                </h2>
+                <h1 class="display-4 fw-bold text-white">EDMILSON_</h1>
+                <p class="lead">Desenvolvedor | Tecnico em Informatica | Entusiasta</p>
+            </div>
 
-    </header>
+            <!-- Botões Ícones -->
+            <div class="mt-4">
+                <a href="#sobre" class="section-icon-btn" title="Sobre Mim">
+                    <i class="fas fa-user"></i>
+                </a>
+                <a href="#projetos-principais" class="section-icon-btn" title="Projetos">
+                    <i class="fas fa-code"></i>
+                </a>
+                <a href="#outros-projetos" class="section-icon-btn" title="Outros Trabalhos">
+                    <i class="fas fa-folder-open"></i>
+                </a>
+                <a href="mailto:seuemail@exemplo.com" class="section-icon-btn" title="Contato">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </section>
 
-    <article>
         <div class="container">
-            <div class="row">
-                <div class="col-3">
-                    <img src="style/img/foto_placeholder.jpg"
-                        alt="Foto do Edmilson membro do curso técnico de informática" class="w-100 h-auto">
-                </div>
+            <div class="section-divider"></div>
 
-                <div class="col-4">
-                    <h1>Edmilson Dev-Site</h1>
-                    <h2>Aluno do Curso técnico de informática.</h2>
-                    <button><b>Sobre Mim</b></button>
-                    <button><b>Formação</b></button>
-                    <button><b>Projetos</b></button>
-                    <button><b>Galeria</b></button>
-                    <button><b>Contato</b></button>
-                </div>
+            <!-- SOBRE MIM SECTION -->
+            <section id="sobre" class="mb-5">
+                <h2 class="text-center mb-5"><span style="color:var(--cor-neon)">#</span> Sobre_Mim</h2>
+                
+                <div class="row align-items-center">
+                    <!-- Coluna Carrossel -->
+                    <div class="col-md-6 mb-4">
+                        <div id="carouselAbout" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <!-- Slide 1 -->
+                                <div class="carousel-item active">
+                                    <!-- COLOQUE O CAMINHO DA SUA FOTO AQUI -->
+                                    <img src="https://via.placeholder.com/600x400/4B0082/FFF?text=Foto+1" class="d-block w-100" alt="Foto 1">
+                                </div>
+                                <!-- Slide 2 -->
+                                <div class="carousel-item">
+                                    <img src="https://via.placeholder.com/600x400/4B0082/FFF?text=Foto+2" class="d-block w-100" alt="Foto 2">
+                                </div>
+                                <!-- Slide 3 -->
+                                <div class="carousel-item">
+                                    <img src="https://via.placeholder.com/600x400/4B0082/FFF?text=Foto+3" class="d-block w-100" alt="Foto 3">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselAbout" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselAbout" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                    </div>
 
-                <div class="col-3">
-                    <h3>Contatos</h3>
-                    <ul>
-                        <li><a href="">Git Hub</a></li>
-                        <li><a href="">Mail</a></li>
-                        <li><a href="">X</a></li>
-                    </ul>
+                    <!-- Coluna Texto e Contato -->
+                    <div class="col-md-6">
+                        <div class="contact-card">
+                            <h3>Quem sou eu</h3>
+                            <p>
+                                Olá mundo! O meu nome é Edmilson Araújo Castro Filho, mas todo mundo me chama de Ed. Gosto bastante do tema tecnologia no geral, uma paixão que se formou a partir do desenvolvimento do meus primeiros passos em aulas de informática.
+                                Ouso dizer que sou um fuçador de carteirinha! Quero entender como as coisas funcionam e sempre me fasciono pelo resultado!
+                                Em tempo livre me afogo em outros projetos pessoais, jogos de luta e filmes de ação.
+                                <b>$CodeTheWorld_</b>
+                            </p>
+                            
+                            <hr class="border-secondary">
+
+                            <h4 class="mb-3">> Canais de Comunicação</h4>
+                            <ul class="list-unstyled">
+                                <li class="mb-2">
+                                    <i class="fas fa-envelope me-2" style="color: var(--cor-neon);"></i>
+                                    <a href="mailto:seuemail@exemplo.com">edmilson.castro.filho@gmail.com</a>
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fab fa-github me-2" style="color: var(--cor-neon);"></i>
+                                    <a href="https://github.com/B4conWiz4rd" target="_blank">github.com/B4conWiz4rd</a>
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fab fa-twitter me-2" style="color: var(--cor-neon);"></i>
+                                    <a href="https://twitter.com/seuusuario" target="_blank">@caixa</a>
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fab fa-linkedin me-2" style="color: var(--cor-neon);"></i>
+                                    <a href="https://linkedin.com/in/seuusuario" target="_blank">linkedin.com/in/seuusuario</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </section>
+
+            <div class="section-divider"></div>
+
+            <!-- PROJETOS PRINCIPAIS -->
+            <section id="projetos-principais" class="mb-5">
+                <h2 class="text-center mb-5"><span style="color:var(--cor-neon)">#</span> Projetos_Principais</h2>
+
+                <div class="row">
+                    <!-- Projeto 1 -->
+                    <div class="col-md-6">
+                        <div class="project-card">
+                            <!-- Imagem do Projeto -->
+                            <img src="https://via.placeholder.com/600x300/2a0a40/FFF?text=Projeto+Alpha" class="project-img" alt="Projeto 1">
+                            
+                            <h3>FocusFlow</h3>
+                            <p class="text-secondary">Uma extensão de navegador que auxilia usuários que utilizam o navegador como ferramenta unificada para trabalho, ele bloqueia sites que pertubam a concentração e te ajuda com empurrôes amigáveis.</p>
+                            
+                            <div class="tech-icons mb-3">
+                                <!-- Ícones -->
+                                <i class="fab fa-html5" title="HTML5"></i>
+                                <i class="fab fa-css3-alt" title="CSS"></i>
+                                <i class="fab fa-js" title="JavaScript"></i>
+                            </div>
+
+                            <a href="#" class="btn btn-terminal w-100">Acessar Projeto_</a>
+                        </div>
+                    </div>
+
+                    <!-- Projeto 2 -->
+                    <div class="col-md-6">
+                        <div class="project-card">
+                            <img src="https://via.placeholder.com/600x300/2a0a40/FFF?text=Projeto+Beta" class="project-img" alt="Projeto 2">
+                            
+                            <h3>Nome do Projeto 2</h3>
+                            <p class="text-secondary">Descrição breve. Fale sobre os desafios técnicos que você superou e o resultado final.</p>
+                            
+                            <div class="tech-icons mb-3">
+                                <i class="fab fa-python" title="Python"></i>
+                                <i class="fas fa-database" title="SQL"></i>
+                            </div>
+
+                            <a href="#" class="btn btn-terminal w-100">Acessar Projeto_</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="section-divider"></div>
+
+            <!-- OUTROS PROJETOS -->
+            <section id="outros-projetos" class="mb-5">
+                <h2 class="text-center mb-5"><span style="color:var(--cor-neon)">#</span> Outros_Arquivos</h2>
+                
+                <div class="row">
+                    <!-- Outro Projeto 1 -->
+                    <div class="col-md-4 col-sm-6 mb-4">
+                        <div class="project-mini-card">
+                            <img src="https://via.placeholder.com/400x200/1a0529/FFF?text=Projeto+Extra+1" alt="Extra 1">
+                            <h5>Projeto Extra 1</h5>
+                            <a href="#" class="btn btn-sm btn-terminal mt-2">Ver_</a>
+                        </div>
+                    </div>
+
+                    <!-- Outro Projeto 2 -->
+                    <div class="col-md-4 col-sm-6 mb-4">
+                        <div class="project-mini-card">
+                            <img src="https://via.placeholder.com/400x200/1a0529/FFF?text=Projeto+Extra+2" alt="Extra 2">
+                            <h5>Projeto Extra 2</h5>
+                            <a href="#" class="btn btn-sm btn-terminal mt-2">Ver_</a>
+                        </div>
+                    </div>
+
+                    <!-- Outro Projeto 3 -->
+                    <div class="col-md-4 col-sm-6 mb-4">
+                        <div class="project-mini-card">
+                            <img src="https://via.placeholder.com/400x200/1a0529/FFF?text=Projeto+Extra+3" alt="Extra 3">
+                            <h5>Projeto Extra 3</h5>
+                            <a href="#" class="btn btn-sm btn-terminal mt-2">Ver_</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
 
-        <div>
-            <h3>O curso técnico</h3>
-            <p>
-                Gosto bastante de manutenção de hardware e também "montar" o software, digo que ver tudo funcionando
-                fazem os meus olhos brilharem! Percebi durante o curso as possibilidades dessa área bela área, mesmo
-                batendo a cabeça e entrando por conta própia em curvas sem saidas.
+        <!-- FOOTER -->
+        <footer class="text-center py-4 mt-5" style="border-top: 1px solid var(--cor-primaria);">
+            <p class="mb-0 text-secondary">
+                &copy; 2023 Seu Nome. System Status: <span style="color: #0f0;">ONLINE</span>
             </p>
-            <p>
-                <b>Desafios vem sempre, mas não podemos desistir!</b>
-            </p>
-            <p>
-                Já trabalhei com as seguintes áreas durante os 3 semestres do curso técnico:
-            </p>
-            <ul>
-                <li>Desenvolvimento Web</li>
-                <li>Linguagem de programação</li>
-                <li>Linguagem Orientada a Objetos</li>
-                <li>Segurança de Sistemas</li>
-                <li>Sistemas operacionais</li>
-            </ul>
-        </div>
+        </footer>
+    </div>
 
-        <div class="projetos">
-            <h3>Meus projetos favoritos</h3>
-            <div class="projeto1">
-                <img src="style/img/projeto_placeholder.jpg" alt="Foto que ilustra o projeto ---" srcset="">
-                <h4>Projeto ---</h4>
-                <p>
-                    Este é o projeto --- é sobre
-                </p>
-            </div>
-            <div class="projeto2">
-                <img src="style/img/projeto_placeholder.jpg" alt="Foto que ilustra o projeto ---" srcset="">
-                <h4>Projeto ---</h4>
-                <p>
-                    Este é o projeto --- é sobre
-                </p>
-            </div>
-            <h3>Outros Projetos!</h3>
-            <div class=""></div>
-        </div>
-    </article>
+    <!-- Bootstrap JS (CDN - Substituir por local) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-    <footer>
-        <p>Site densenvolvido por Edmilson A. C. Filho <b>2026</b></p>
-    </footer>
+    <!-- Script Personalizado -->
+    <script>
+        // --- EFEITO DE DIGITAÇÃO (Typewriter) ---
+        const textElement = document.getElementById('typing-text');
+        
+        // Frases que serão digitadas
+        const phrases = [
+            "$ Iniciando sistema...",
+            "> Carregando perfil...",
+            "> Olá, bem-vindo ao meu portifólio.",
+            "$ Conexão estabelecida.",
+            "> sudo apt update experiencia-de-usuario",
+            "> cowsay Olá Mundo!",
+            "$ MeuSite.html",
+            "> cowsay Cpu não é gabinete!"
+        ];
+        
+        let phraseIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        let typeSpeed = 100;
 
+        function typeWriter() {
+            const currentPhrase = phrases[phraseIndex];
+            
+            if (isDeleting) {
+                // Apagando
+                textElement.textContent = currentPhrase.substring(0, charIndex - 1);
+                charIndex--;
+                typeSpeed = 50; // Mais rápido ao apagar
+            } else {
+                // Digitando
+                textElement.textContent = currentPhrase.substring(0, charIndex + 1);
+                charIndex++;
+                typeSpeed = 100; // Velocidade normal
+            }
+
+            if (!isDeleting && charIndex === currentPhrase.length) {
+                // Terminou de digitar a frase, pausa antes de apagar
+                isDeleting = true;
+                typeSpeed = 2000; 
+            } else if (isDeleting && charIndex === 0) {
+                // Terminou de apagar, passa para a próxima frase
+                isDeleting = false;
+                phraseIndex = (phraseIndex + 1) % phrases.length;
+                typeSpeed = 500;
+            }
+
+            setTimeout(typeWriter, typeSpeed);
+        }
+
+        // Inicia a animação ao carregar
+        document.addEventListener('DOMContentLoaded', typeWriter);
+
+        // --- SMOOTH SCROLL PARA LINKS INTERNOS ---
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
-
 </html>
